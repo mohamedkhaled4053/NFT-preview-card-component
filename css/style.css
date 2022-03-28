@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --p-color:hsl(215, 51%, 70%)
+}
+
+body{
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'outfit';
+    display: flex;
+}
+
+.main{
+    margin: auto;
+    width: 400px;
+    background-color: hsl(216, 50%, 16%);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 90%;
+}
+
+.main .image img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.main .image{
+    position: relative;
+    /* make it flex would adjust the img with the ::before */
+    display: flex;
+}
+
+.main .image::before{
+    content: url('../images/icon-view.svg');
+    position: absolute;
+    background: #00ffff3d;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    opacity: 0;
+    transition: 0.2s;
+}
+.main .image:hover::before{
+    opacity: 1;
+}
+
+h2{
+    color: white;
+    padding: 10px 0;
+}
+
+h2:hover{
+    color: cyan;
+}
+
+.main> p{
+    color: var(--p-color);
+    padding: 10px 0;
+}
+
+.overview{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid hsl(215, 32%, 27%) 1px;
+    padding: 15px 0;
+}
+
+.time{
+    color: var(--p-color);
+}
+.price{
+    color: cyan;
+}
+
+.overview div{
+    display: flex;
+    align-items: center;
+}
+
+.overview span{
+    margin-left: 10px;
+}
+
+
+.creation{
+    display: flex;
+    align-items: center;
+    padding: 15px 0 0;
+}
+
+.creation p{
+    color: var(--p-color);
+    margin-left: 15px;
+}
+
+.creation span{
+    color: white;
+}
+
+.creation span:hover{
+    color: cyan;
+}
+
+.creation img{
+    width: 50px;
+    border: solid white 2px;
+    border-radius: 50%;
+}
+
